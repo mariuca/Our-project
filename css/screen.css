@@ -1,0 +1,145 @@
+/* ajoute la propriété transition-duration au bon endroit 
+pour avoir une animation de couleur quand on passe en survol */
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.l-main-menu{
+	margin: 0;
+	padding: 0;
+		
+}
+
+.l-main-header {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.l-main-nav{
+	padding: 1rem;
+}
+
+.l-main-nav.is-active{
+	display: none;
+}
+
+.l-main-nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+.l-main-nav li{
+	margin: 0.5rem;
+	padding: 1rem 0;
+	list-style: none;
+	display: block;
+}
+
+.l-main-nav	a{
+	padding: 1rem;
+	border: solid 2px maroon;
+	background: radial-gradient(white, green);
+	text-decoration: none;
+}
+
+a:hover{
+	background: red;
+}
+
+
+
+.l-main-header {
+    width: 100%;
+    height: 25rem;
+    background: url('../images/sheep.png') bottom center no-repeat, url('../images/clouds.png') 115% center repeat-x, #00bcd2;
+    background-size: 25rem auto, auto 25rem;
+    animation-name: example;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.l-main-header h1 {
+    color: black;
+    text-shadow: 2px 2px 0px #fff, 5px 4px 0px rgba(60,60,60,0.15);
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.m-home-advantages{
+	display: flex;
+	flex-direction:row;
+}
+.m-home-advantages-item {
+  text-align: center;
+  border: 1px #c0c0c0 solid;
+  margin: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.m-home-advantages-item h1 {
+  font-size: 1.4rem;
+}
+
+.m-home-advantages-item .fas {
+  font-size: 3rem;
+}
+
+.content-footer{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-around;
+	margin: 1rem;
+	
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: masuperanimation 2s infinite;
+}
+
+@keyframes example {
+    from {
+        background-position: bottom center, 100% center;
+    }
+    to {
+        background-position: bottom center, 0 center;
+    }
+}
+
+/* Version Tablette / PC */
+@media screen and (min-width: 500px){
+
+	.l-main-hamburger{
+		display: none;
+	}
+
+	.l-main-nav.is-active {
+		display: block;
+
+	}
+
+	.l-main-nav li{
+		display: inline-block;
+	}
+
+
+}
